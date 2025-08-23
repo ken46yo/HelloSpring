@@ -7,5 +7,10 @@ SpringBootを使ったWebアプリケーション作成の練習に使うモジ�
 
 ## ローカル実行
 ```bash
+./gradlew bootRun
+```
+
+## ローカルビルドのみ
+```bash
 ./gradlew bootJar
 ```
