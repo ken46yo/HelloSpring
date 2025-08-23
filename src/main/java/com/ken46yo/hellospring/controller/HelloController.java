@@ -7,7 +7,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping("/hello")
-    public String hello() {
-        return "Hello, REST API!";
+    public HelloResponse hello() {
+        return new HelloResponse("This is my first Spring Boot application!");
+    }
+
+    // レスポンス用クラス
+    static class HelloResponse {
+        private String message;
+
+        public HelloResponse(String message) {
+            this.message = message;
+        }
+
+        public String getMessage() {
+            return message;
+        }
     }
 }
